@@ -23,7 +23,7 @@
     <meta name="color-scheme" content="light dark">
 
     <!-- Your app title -->
-    <title>Generala</title>
+    <title>My App</title>
     <!-- Path to Framework7 Library CSS -->
     <link rel="stylesheet" href="lib/framework7/framework7-bundle.min.css">
     <!-- Path to icons -->
@@ -46,62 +46,51 @@
                 <div class="navbar">
                     <div class="navbar-bg"></div>
                     <div class="navbar-inner">
-                        
-                        <div class="title">Anotador Generala</div>
-                        
+                        <div class="left"><i class="icon icon-back"></i></div>
+                        <div class="title">Page Title</div>
+                        <div class="right"><i class="icon icon-forward"></i></div>
                     </div>
-                </div>    
-                
+                </div>
+        
+                <!-- Toolbar -->
+                <div class="toolbar toolbar-bottom">
+                    <div class="toolbar-inner">
+                    <!-- Toolbar links -->
+                    <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                    </div>
+                </div>
         
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
-                        
-                        <!-- Input #nombre -->
-                        <div class="list no-hairlines-md">
-                            <ul>
-                              <li class="item-content item-input">
-                                <div class="item-media">
-                                  <i class="icon demo-list-icon"></i>
+                        <p>Page content goes here</p>
+                        <!-- Link to another page -->
+                        <a href="/about/" data-view=".page-content">About app</a>
+
+                        <!-- In data-popup attribute we specify CSS selector of popup we need to open -->
+                        <p><a href="#" data-popup=".my-popup" class="popup-open">Open Popup</a></p>
+
+                        <!-- And somewhere in DOM -->
+                        <div class="popup my-popup">
+                            <div class="view">
+                                <div class="page">
+                                    <div class="navbar">
+                                        <div class="navbar-bg"></div>
+                                        <div class="navbar-inner">
+                                            <div class="title">Popup</div>
+                                            <div class="right">
+                                                <!-- Link to close popup -->
+                                                <a class="link popup-close">Close</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="page-content">
+                                      ...
+                                    </div>
                                 </div>
-                                <div class="item-inner">
-                                  <div class="item-title item-label">Nombre</div>
-                                  <div class="item-input-wrap">
-                                    <input id="jugador1" type="text" placeholder="Jugador 1" />
-                                    <span class="input-clear-button"></span>
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
+                            </div>
                         </div>
-
-                        <!-- Input #nombre -->
-                        <div class="list no-hairlines-md">
-                            <ul>
-                              <li class="item-content item-input">
-                                <div class="item-media">
-                                  <i class="icon demo-list-icon"></i>
-                                </div>
-                                <div class="item-inner">
-                                  <div class="item-title item-label">Nombre</div>
-                                  <div class="item-input-wrap">
-                                    <input id="jugador2" type="text" placeholder="Jugador 2" />
-                                    <span class="input-clear-button"></span>
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
-                        </div>
-
-                        <!-- Link a anotador.html -->
-                        <a href="/anotador/" id="btnIngresar" class="col button button-fill" id="btnIngresar">Ingresar</a>
-
-                        
-                        
-
-                    
-
-                        
                     </div>
                 </div>
             </div>

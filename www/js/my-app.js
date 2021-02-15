@@ -15,15 +15,16 @@ var app = new Framework7({
     },
     // Add default routes
     routes: [
-      {
-        path: '/about/',
-        url: 'about.html',
-      },
+      { path: '/anotador/', url: 'anotador.html', },
+      { path: '/index/', url: 'index.html', },
     ]
     // ... other parameters
   });
 
 var mainView = app.views.create('.view-main');
+
+var nJugador1 = "";
+var nJugador2 = "";
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
@@ -37,8 +38,9 @@ $$(document).on('page:init', function (e) {
 })
 
 // Option 2. Using live 'page:init' event handlers for each page
-$$(document).on('page:init', '.page[data-name="about"]', function (e) {
+$$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
     // Do something here when page with data-name="about" attribute loaded and initialized
     console.log(e);
-    alert('Hello');
+    console.log("cargando anotador.html");
+    
 })
