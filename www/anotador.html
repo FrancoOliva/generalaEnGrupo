@@ -1,26 +1,83 @@
 <!-- We don't need a full layout in this file because this page will be parsed with Ajax.  -->
-<div class="page" data-name="about">
+<div class="page" data-name="anotador">    
     
-    <div class="navbar">
-        <div class="navbar-inner sliding">
-        <div class="left">
-            <a href="#" class="link back">
-            <i class="icon icon-back"></i>
-            <span class="ios-only">Back</span>
-            </a>
+    <div class="page-content">        
+
+        <div class="row justify-content-center">
+            <!-- Columna correspondiente a las categorías -->
+            <div class="row flex-direction-column">
+              <div class="col"><h2>Categoría</h2></div>
+              <div class="col">1</div>
+              <div class="col">2</div>
+              <div class="col">3</div>
+              <div class="col">4</div>
+              <div class="col">5</div>
+              <div class="col">6</div>
+
+              <div class="col">Doble</div>
+              <div class="col">Escalera</div>
+              <div class="col">Full</div>
+              <div class="col">Poker</div>
+              <div class="col">Generala</div>
+              <div class="col">Puntaje Total</div>
+
+            </div>
+
+            
+            <!-- Columna correspondiente al jugador 1 -->
+            <div class="row flex-direction-column">
+            
+              <div class="col"><h2 id="nombre1"></h2></div>
+
+              <div class="col" id="j1_1">1</div>
+              <div class="col" id="j1_2">2</div>
+              <div class="col" id="j1_3">3</div>
+              <div class="col" id="j1_4">4</div>
+              <div class="col" id="j1_5">5</div>
+              <div class="col" id="j1_6">6</div>
+
+              <div class="col" id="j1_d">Doble</div>
+              <div class="col" id="j1_e">Escalera</div>
+              <div class="col" id="j1_f">Full</div>
+              <div class="col" id="j1_p">Poker</div>
+              <div class="col" id="j1_g">Generala</div>
+              
+              <div class="col" id="j1_puntaje1">800</div>
+              
+            </div>
+
+            <!-- Columna correspondiente al jugador 2 -->
+            <div class="row flex-direction-column">
+            
+              <div class="col"><h2 id="nombre2"></h2></div>
+              
+              <div class="col" id="j2_1">1</div>
+              <div class="col" id="j2_2">2</div>
+              <div class="col" id="j2_3">3</div>
+              <div class="col" id="j2_4">4</div>
+              <div class="col" id="j2_5">5</div>
+              <div class="col" id="j2_6">6</div>
+
+              <div class="col" id="j2_d">Doble</div>
+              <div class="col" id="j2_e">Escalera</div>
+              <div class="col" id="j2_f">Full</div>
+              <div class="col" id="j2_p">Poker</div>
+              <div class="col" id="j2_g">Generala</div>
+              
+              <div class="col" id="j2_puntaje2">700</div>
+              
+            </div>
+
         </div>
-        <div class="title">About Framework7</div>
-        </div>
-    </div>
+
+        <!-- Botones para volver al index o reiniciar el puntaje -->
+            <div class="row justify-content-center">
+                <button class="col button button-fill" id="btnVolver"> Volver </button>
+                <button class="col button button-fill" id="btnReiniciarPuntos"> Reiniciar Puntos </button>
+            </div>
+
+   
+    </div>    
     
-    <div class="page-content">
-        <div class="block-title">Welcome to Framework7</div>
-        <div class="block block-strong">
-        <p>Framework7 - is a free and open source HTML mobile framework to develop hybrid mobile apps or web apps with iOS or Android (Material) native look and feel. It is also an indispensable prototyping apps tool to show working app prototype as soon as possible in case you need to. Framework7 is created by Vladimir Kharlampidi (iDangero.us).</p>
-        <p>The main approach of the Framework7 is to give you an opportunity to create iOS and Android (Material) apps with HTML, CSS and JavaScript easily and clear. Framework7 is full of freedom. It doesn't limit your imagination or offer ways of any solutions somehow. Framework7 gives you freedom!</p>
-        <p>Framework7 is not compatible with all platforms. It is focused only on iOS and Android (Material) to bring the best experience and simplicity.</p>
-        <p>Framework7 is definitely for you if you decide to build iOS and Android hybrid app (Cordova or PhoneGap) or web app that looks like and feels as great native iOS or Android (Material) apps.</p>
-        </div>    
-    </div>
 
 </div>

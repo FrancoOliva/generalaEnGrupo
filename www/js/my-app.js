@@ -41,6 +41,45 @@ $$(document).on('page:init', function (e) {
 $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
     // Do something here when page with data-name="about" attribute loaded and initialized
     console.log(e);
-    console.log("cargando anotador.html");
+    console.log('Estoy en la página anotador');
+
+    $$('#nombre1').text(nJugador1); 
+    $$('#nombre2').text(nJugador2);
+
+    $$('#btnVolver').on('click', volverInicio );
+    $$('#btnReiniciarPuntos').on('click', reiniciarPuntos );
+    
     
 })
+
+$$(document).on('page:init', '.page[data-name="index"]', function (e) {
+    // Do something here when page with data-name="about" attribute loaded and initialized
+    console.log(e);
+
+    $$('#btnIngresar').on('click', tomarValores );
+    
+    
+    
+})
+
+// Función botón Ingresar
+
+function tomarValores(){
+
+    nJugador1 = "";
+    nJugador2 = "";
+
+    nJugador1 = $$('#jugador1').val();
+    nJugador2 = $$('#jugador2').val();
+
+    mainView.router.navigate('/anotador/');
+
+}
+
+function volverInicio(){
+    mainView.router.navigate('/index/');
+}
+
+function reiniciarPuntos(){
+    console.log('Estoy reiniciando puntos supuestamente ..');
+}
