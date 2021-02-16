@@ -26,6 +26,9 @@ var mainView = app.views.create('.view-main');
 var nJugador1 = "";
 var nJugador2 = "";
 
+var pJugador1 = 0;
+var pJugador2 = 0;
+
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
@@ -43,8 +46,11 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
     console.log(e);
     console.log('Estoy en la página anotador');
 
-    $$('#nombre1').text(nJugador1); 
-    $$('#nombre2').text(nJugador2);
+    $$('#nombreJ1').text(nJugador1); 
+    $$('#nombreJ2').text(nJugador2);
+
+    $$('#puntajeJ1').text(pJugador1);
+    $$('#puntajeJ2').text(pJugador2);
 
     $$('#btnVolver').on('click', volverInicio );
     $$('#btnReiniciarPuntos').on('click', reiniciarPuntos );
