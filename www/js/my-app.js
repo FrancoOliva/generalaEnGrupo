@@ -54,6 +54,10 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
 
     $$('#btnVolver').on('click', volverInicio );
     $$('#btnReiniciarPuntos').on('click', reiniciarPuntos );
+
+    $$('button').on('click', function(){
+        sumarPuntaje(this.id);
+    });
     
     
 })
@@ -88,4 +92,14 @@ function volverInicio(){
 
 function reiniciarPuntos(){
     console.log('Estoy reiniciando puntos supuestamente ..');
+}
+
+function sumarPuntaje(id){
+    var idBoton = id;
+
+    console.log(idBoton);
+    console.log('Sumar puntaje!');
+
+    
+
 }
