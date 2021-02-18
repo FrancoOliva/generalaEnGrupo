@@ -29,6 +29,8 @@ var nJugador2 = "";
 var pJugador1 = 0;
 var pJugador2 = 0;
 
+var columna_jugador = "";
+
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
@@ -55,12 +57,22 @@ $$(document).on('page:init', '.page[data-name="anotador"]', function (e) {
     $$('#btnVolver').on('click', volverInicio );
     $$('#btnReiniciarPuntos').on('click', reiniciarPuntos );
 
-    $$('button').on('click', function(){
-        sumarPuntaje(this.id);
-    });
+    $$('button').on('click', function(){ mostrarCategoria(this.id); });
+
+    $$('#l1').on('click', function(){ modificarPuntos(this.id);    });
+    $$('#l2').on('click', function(){ modificarPuntos(this.id);    });
+    $$('#l3').on('click', function(){ modificarPuntos(this.id);    });
+    $$('#l4').on('click', function(){ modificarPuntos(this.id);    });
+    $$('#l5').on('click', function(){ modificarPuntos(this.id);    });
+
+    $$('#servido').on('click', function(){ modificarPuntos(this.id);    });
+    $$('#nServido').on('click', function(){ modificarPuntos(this.id);    });
+    $$('#tachar').on('click', function(){ modificarPuntos(this.id);    });
     
     
 })
+
+
 
 $$(document).on('page:init', '.page[data-name="index"]', function (e) {
     // Do something here when page with data-name="about" attribute loaded and initialized
@@ -75,9 +87,6 @@ $$(document).on('page:init', '.page[data-name="index"]', function (e) {
 // Función botón Ingresar
 
 function tomarValores(){
-
-    nJugador1 = "";
-    nJugador2 = "";
 
     nJugador1 = $$('#jugador1').val();
     nJugador2 = $$('#jugador2').val();
@@ -94,12 +103,84 @@ function reiniciarPuntos(){
     console.log('Estoy reiniciando puntos supuestamente ..');
 }
 
-function sumarPuntaje(id){
-    var idBoton = id;
-
-    console.log(idBoton);
-    console.log('Sumar puntaje!');
-
+function mostrarCategoria(id){
     
+    columna_jugador = id;
+    
+    var categoria = id[3];
+
+    switch (categoria){
+        case "1":
+            for (i = 0; i < 5; i++) {
+            var mostrarPuntos = 1 * (i+1);
+            $$('#l'+(i+1)).html(mostrarPuntos);
+        } 
+        break;
+        case "2":
+            for (i = 0; i < 5; i++) {
+            var mostrarPuntos = 2 * (i+1);
+            $$('#l'+(i+1)).html(mostrarPuntos);
+        } 
+        break;
+        case "3":
+            for (i = 0; i < 5; i++) {
+            var mostrarPuntos = 3 * (i+1);
+            $$('#l'+(i+1)).html(mostrarPuntos);
+        } 
+        break;
+        case "4":
+            for (i = 0; i < 5; i++) {
+            var mostrarPuntos = 4 * (i+1);
+            $$('#l'+(i+1)).html(mostrarPuntos);
+        } 
+        break;
+        case "5":
+            for (i = 0; i < 5; i++) {
+            var mostrarPuntos = 5 * (i+1);
+            $$('#l'+(i+1)).html(mostrarPuntos);
+        } 
+        break;
+        case "6":
+            for (i = 0; i < 5; i++) {
+            var mostrarPuntos = 6 * (i+1);
+            $$('#l'+(i+1)).html(mostrarPuntos);
+        } 
+        break;
+
+        default:
+        break;
+
+    }
+    console.log('Mostrando categorías!');
+    console.log(columna_jugador);
+    console.log(categoria);    
+        
+
+}
+
+function modificarPuntos(id){    
+    
+    var valor_link = $$("#" + id).text();
+    
+    if(valor_link == "Tachar"){
+        $$("#" + columna_jugador).text("x");
+    } else {
+        $$("#" + columna_jugador).text(valor_link);
+    }
+
+    console.log("Los valores mostrados se ingresaron en las celdas de puntaje.");
+    console.log("invocando función sumar");
+    
+    sumarPuntaje();
+
+
+}
+
+function sumarPuntaje(){
+    
+    var jugador = (columna_jugador[0]+columna_jugador[1]);
+
+    console.log("Soy el jugador: "+ jugador);
+
 
 }
